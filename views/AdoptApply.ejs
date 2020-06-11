@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>AdoptApply</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="jumbotron text-center" >
+        <h1>Hello ,<%= info%> welcome back to animal home</h1>
+        <p>here you can see many kinds of animals </p>
+        <button type="button" class="btn btn-default" onclick="location.href='/HomePage'" > Home </button>
+        <button type="button" class="btn btn-default" onclick="location.href='/SearchAnimal'">Search</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/AddAnimal'">Add Animal</button>
+        <button type="button" class="btn btn-default text-info" onclick="location.href='/AdoptApply'">Adopt</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/'">Logout</button>
+    </div>
+</div>
+
+
+<div class="container">
+    <form class="m-auto" role="form"  method="post"  onsubmit="onSubmit()">
+        <p>
+        <h3>If you want to adopt an animal, please fill in the form and submit:</h3>
+        </p>
+        <label for="firstName">  First name:  </label>
+            <input type="text"  class="form-control" name="firstName" style="margin-right: 10%"  >
+        <label for="secondName">  Second name:  </label>
+            <input type="text"  class="form-control" name="secondName" style="margin-right: 10%"  >
+        <label for="Email">  Email:  </label>
+            <input type="text"  class="form-control" name="Email" style="margin-right: 10%"  >
+
+        <label for="phoneNumber">  Phone number:  </label>
+            <input type="text"  class="form-control" name="phoneNumber" style="margin-right: 10%"  >
+
+        <label for="postCode">  Post code:  </label>
+            <input type="text"  class="form-control" name="postCode" style="margin-right: 10%"  >
+
+        <label for="animalNumber">  Animal number: </label>
+            <input type="text"  class="form-control" name="animalNumber" style="margin-right: 10%"  >
+        <p class="pull-right" style="float: right" >
+            <input class="btn btn-default btn-mini" name="submit" accesskey="l" tabindex="6" type="submit" value="submit">
+        </p>
+    </form>
+
+</div>
+
+
+</body>
+</html>
+
+

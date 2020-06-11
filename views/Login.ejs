@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+
+
+<body>
+
+<div class="container">
+    <div class="jumbotron text-center" >
+        <h1>Welcome to animal home!!</h1>
+        <p>here you can see many kinds of animals </p>
+        <button type="button" class="btn btn-default"> Home </button>
+        <button type="button" class="btn btn-default">Search</button>
+        <button type="button" class="btn btn-default">Add Animal</button>
+        <button type="button" class="btn btn-default">Adopt</button>
+        <button type="button" class="btn btn-default text-info">Login</button>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+          <form class="m-auto" method="post"    role="form" style="padding-top: 10%">
+              <ul >
+                  <li class="center-bloc">UserEmail:
+                      <label>
+                          <input type="text" class="m-auto"  name="email" style="margin-bottom:1%">
+                      </label>
+                  </li>
+                  <li class="center-bloc">Pass word:
+                      <label>
+                          <input type="text" class="m-auto" name="passWord"    style="margin-bottom:1%">
+                      </label>
+                  </li>
+
+                  <div class="pull-right" style="float: right ">
+
+                      <input class="btn btn-default btn-mini" name="submit" accesskey="l" tabindex="6" type="submit" value="Login">
+
+                  </div>
+              </ul>
+          </form>
+    </div>
+      <button  onclick="location.href='/Registration'" class="btn btn-default" style="color: crimson; float: right"  > * Don't have an account yet? Register now</button>
+</div>
+       <div class="text-center"   style="color: crimson   ;padding-left:40%"><%= warring%></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>HomePage</title>
+</head>
+
+
+<body>
+
+<div class="container">
+    <div class="jumbotron text-center" >
+        <h1>Hello ,<%= info%> welcome back to animal home</h1>
+        <p>here you can see many kinds of animals </p>
+        <button type="button" class="btn btn-default text-info" onclick="location.href='/HomePage'" > Home </button>
+        <button type="button" class="btn btn-default" onclick="location.href='/SearchAnimal'">Search</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/AddAnimal'">Add Animal</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/AdoptApply'">Adopt</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/'">Logout</button>
+    </div>
+</div>
+
+<% for(let i=0;i<input.length;i++){%>
+        <div class="container">
+        <div class="row">
+        <div class="col-4 text-center" >
+            <a href="http://localhost:3000/Animal/<%=input[i]._id%>"><img  src="<%=input[i].photo%>" class="img-responsive center-block" width="90%" height="90%"alt="animal"></a>
+        </div>
+
+        <div class="col-4" >
+            <h4>Breeds: <%=input[i].breeds%></h4>
+            <h6>Species: <%=input[i].species%></h6>
+            <h6>Gender: <%=input[i].gender%></h6>
+            <h6>Color Number: <%=input[i].color%></h6>
+            <h6>Location: <%=input[i].location%></h6>
+            <h6>Date of birth: <%=input[i].birth%></h6>
+            <h6>Animal ID: <%=input[i]._id%></h6>
+        </div>
+    </div>
+</div>
+<%}%>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Animal</title>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="jumbotron text-center" >
+        <h1> Lovely Animals</h1>
+        <p>here you can see many kinds of animals </p>
+        <button type="button" class="btn btn-default" onclick="location.href='/HomePage'" > Home </button>
+        <button type="button" class="btn btn-default" onclick="location.href='/SearchAnimal'">Search</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/AddAnimal'">Add Animal</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/AdoptApply'">Adopt</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/'">Logout</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4 " >
+            <img  src="/<%=input.photo%>" class="img-responsive center-block" style="padding-top:1% " width=80% height=auto alt="a kitten"></a>
+            <h5>Animal Number:</br><%=input._id%></h5>
+            <h5>Species:<%=input.species%></h5>
+            <h5>Gender:<%=input.gender%></h5>
+            <h5>Color Number:<%=input.color%></h5>
+            <h5>Breeds:<%=input.breeds%></h5>
+            <h5>Location:<%=input.location%></h5>
+            <h5>Date of birth:<%=input.birth%></h5>
+        </div>
+
+        <div class="col-8 " >
+            <form method="post">
+            <h3>Comments：</h3>
+            <%for(var i=0;i<input.comment.length;i++){%>
+               <li><%= input.comment[i]%></li>
+            <%}%>
+            <h5>Add your comments：</h5>
+             <input type="text"  class="form-control" name="comments" style="margin-right: 10%"  >
+
+            <div style="float:right ">
+                <button class="btn btn-default btn-mini" type="submit" >Submit</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/javascripts/add.js"></script>
+    <title>AddAnimal</title>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="jumbotron text-center" >
+        <h1>Hello ,<%= info%> welcome back to animal home</h1>
+        <p>here you can see many kinds of animals </p>
+        <button type="button" class="btn btn-default" onclick="location.href='/HomePage'" > Home </button>
+        <button type="button" class="btn btn-default"onclick="location.href='/SearchAnimal'">Search</button>
+        <button type="button" class="btn btn-default text-info" onclick="location.href='/AddAnimal'">Add Animal</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/AdoptApply'">Adopt</button>
+        <button type="button" class="btn btn-default" onclick="location.href='/'">Logout</button>
+    </div>
+</div>
+
+<div class="container">
+        <form id="xForm" onsubmit="onSubmit()" enctype="multipart/form-data" method="POST">
+            <label for="species">  Species: </label>
+            <input type="text"  class="form-control" name="species" style="margin-right: 10%"  >
+            <label for="breeds">  Breeds: </label>
+                <input type="text"  class="form-control"  name="breeds" style="margin-right: 10%"  >
+            <label for="gender">  Gender:  </label>
+                <input type="text"  class="form-control"  name="gender" style="margin-right: 10%"  >
+            <label for="color">  Color:  </label>
+                <input type="text"  class="form-control"  name="color" style="margin-right: 10%"  >
+            <label for="location">  Location: </label>
+                <input type="text"  class="form-control" name="location" style="margin-right: 10%"  >
+            <label for="birth">  Date of birth:</label>
+                <input type="text"  class="form-control"  name="birth" style="margin-right: 10%"  >
+            <label for="tag">  Other tags: </label>
+                <input type="text"  class="form-control"  name="tag" style="margin-right: 10%"  >
+            <label for="myImage">Choose an image</label>
+                <div >
+                    <input type="file" id="myImage" name="myImg" accept="image/*" required>
+                </div>
+            <p class="pull-right" style="float: right" >
+                <input class="btn btn-default btn-mini" name="g" type="submit" value="Submit" id="g">
+            </p>
+
+        </form>
+
+    <div class="text-center"   style="color: #61dc14  ;padding-left:60%"><%= info%></div>
+</div>
+
+
+</body>
+</html>
+
+
+</body>
+</html>
